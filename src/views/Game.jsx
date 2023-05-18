@@ -1,9 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
-function Game({ view, gameMode }) {
-    
-    const [gameActive, setActive] = useState(true)
+function Game({ view, gameMode, setFinalScore }) {
     
     const [lives, setLives] = useState(3)
     const [score, setScore] = useState(0)
@@ -11,9 +9,11 @@ function Game({ view, gameMode }) {
     
     useEffect(() => {
         if (lives == 0) {
+            setFinalScore(score)
             view("result")
         }
-    }, [lives, view])
+    }, [lives, view, score, setFinalScore])
+
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -27,10 +27,6 @@ function Game({ view, gameMode }) {
         console.log(`${lives} left`)
         e.target.answer.value = ""
         
-        // if (lives == 0) {
-        //     console.log("game over")
-        //     view("result")
-        // }
         return "wrong"
     }
 
@@ -38,8 +34,8 @@ function Game({ view, gameMode }) {
         <>
             <div className="lives">{lives} Lives Left</div>
             <div className="score">{score}</div>
-            <h1>Whats Another Word For:</h1>
-            <h2>{word.word}</h2>
+            <h2>Whats Another Word For:</h2>
+            <h1>{word.word}</h1>
             <form onSubmit={handleSubmit}>
                 <input name="answer" type="text" />
                 <button>Enter</button>

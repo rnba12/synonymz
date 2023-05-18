@@ -1,8 +1,8 @@
-function Result({ view }) {
+function Result({ view, score }) {
     return ( 
         <>
             <h1>Game Over</h1>
-            <div className="score">0</div>
+            <div className="score">{score}</div>
             <button onClick={() => view("game")}>Play Again</button>
             <button onClick={() => view("title")}>Title Screen</button>
         </>
