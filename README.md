@@ -1,1 +1,2 @@
-# synonmyz
+# Synonmyz
+## A word game
