@@ -6,12 +6,13 @@ import Title from './views/Title'
 
 function App() {
     const [view, setView] = useState("title")
+    const [gameMode, setMode] = useState(null)
 
     return (
         <>
-            {view == "title" && <Title/>}
-            {view == "game" && <Game/>}
-            {view == "result" && <Result/>}
+            {view == "title" && <Title view={setView} gameMode={setMode}/>}
+            {view == "game" && <Game view={setView} gameMode={gameMode}/>}
+            {view == "result" && <Result view={setView}/>}
         </>
     )
 }
