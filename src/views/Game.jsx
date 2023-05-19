@@ -3,7 +3,7 @@ import { useState } from "react";
 import data from '../data.json';
 
 function Game({ view, gameMode, setFinalScore }) {
-    // console.log(wordList)
+
     const [lives, setLives] = useState(3)
     const [score, setScore] = useState(0)
     const [word, setWord] = useState(data[0])
@@ -11,18 +11,30 @@ function Game({ view, gameMode, setFinalScore }) {
     const [state, setState] = useState("typing")
 
     function endGame() {
-        setState("wrong")
+        if (gameMode == "arcade") setState("wrong")
+        if (gameMode == "timed") setState("time up")
         setFinalScore(score)
         setTimeout(() => {
             view("result")
-            }, 3000)
+        }, 3000)
     }
     
     useEffect(() => {
+        if (gameMode === "timed") {
+            setTimeout(() => {
+                endGame()
+            }, 10000)
+        }
         if (lives == 0) {
             endGame()
         }
     }, [lives])
+
+    function newWord() {
+        // TODO use api or add more words to json
+        setWord(data[no + 1])
+        setNo(prev => prev + 1)
+    }
 
     function handleNext(isCorrect) {
         if (isCorrect) {
@@ -32,13 +44,12 @@ function Game({ view, gameMode, setFinalScore }) {
             setState("wrong")
             if (gameMode == "arcade") setLives(lives - 1)
         }
-        if (lives - 1 !== 0) {
         setTimeout(() => {
+        if (lives - 1 !== 0) {
             setState("typing")
-            setWord(data[no + 1])
-            setNo(prev => prev + 1)
-        },2000)
+            newWord()
         }
+        },2000)
     }
 
 
@@ -56,9 +67,10 @@ function Game({ view, gameMode, setFinalScore }) {
         <>
             {gameMode === "arcade" && <h3>{lives} Lives Left</h3>}
             <h3>{score}</h3>
-            {state === "typing" && <h2>Whats Another Word For:</h2>}
             {state === "correct" && <h2 style={{color: "green"}}>Correct</h2>}
             {state === "wrong" && <h2 style={{color: "red"}}>Wrong</h2>}
+            {state === "typing" && <h2>Whats Another Word For:</h2>}
+            {state === "time up" && <h2>Times Up</h2>}
             <h1>{word.word}</h1>
             <form onSubmit={handleSubmit}>
                 <input name="answer" type="text" disabled={state !== "typing" || lives === 0} />
