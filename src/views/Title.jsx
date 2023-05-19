@@ -5,7 +5,6 @@ function Title({view, gameMode}) {
     const [showHowTo, setShow] = useState(false) 
 
     function startGame(mode) {
-        console.log(`Game Started in ${mode} mode`)
         gameMode(mode)
         view("game")
     }
