@@ -32,12 +32,13 @@ function Game({ view, gameMode, setFinalScore }) {
             setState("wrong")
             if (gameMode == "arcade") setLives(lives - 1)
         }
+        if (lives - 1 !== 0) {
         setTimeout(() => {
             setState("typing")
             setWord(data[no + 1])
             setNo(prev => prev + 1)
         },2000)
-        
+        }
     }
 
 
