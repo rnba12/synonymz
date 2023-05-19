@@ -46,8 +46,10 @@ function Game({ view, gameMode, setFinalScore }) {
         e.preventDefault()
         const answer = e.target.answer.value
         e.target.answer.value = ""
-        const isCorrect = word.synonyms.some((w) => w === answer)
-        handleNext(isCorrect)
+        if (answer !== "") {
+            const isCorrect = word.synonyms.some((w) => w === answer)
+            handleNext(isCorrect)
+        }
     }
 
     return ( 
