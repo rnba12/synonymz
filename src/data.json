@@ -1,0 +1,34 @@
+[
+    {
+        "word": "hello",
+        "synonyms": ["hi", "howdy", "greetings"]
+    },
+    {
+        "word": "important",
+        "synonyms": ["critical", "essential", "big", "meaningful"]
+    },
+    {
+        "word": "search",
+        "synonyms": ["hunt", "quest", "exploration", "inquiry"]
+    },
+    {
+        "word": "beautiful",
+        "synonyms": ["cute", "pretty", "elegant", "gorgeous"]
+    },
+    {
+        "word": "hello",
+        "synonyms": ["hi", "howdy", "greetings"]
+    },
+    {
+        "word": "important",
+        "synonyms": ["critical", "essential", "big", "meaningful"]
+    },
+    {
+        "word": "search",
+        "synonyms": ["hunt", "quest", "exploration", "inquiry"]
+    },
+    {
+        "word": "beautiful",
+        "synonyms": ["cute", "pretty", "elegant", "gorgeous"]
+    }
+]
