@@ -10,7 +10,9 @@ function Game({ view, gameMode, setFinalScore }) {
     useEffect(() => {
         if (lives == 0) {
             setFinalScore(score)
+            setTimeout(() => {
             view("result")
+            }, 3000)
         }
     }, [lives, view, score, setFinalScore])
 
@@ -21,18 +23,19 @@ function Game({ view, gameMode, setFinalScore }) {
         if (word.synonyms.some((w) => w === answer)) {
             setScore(score + 1)
             e.target.answer.value = ""
+            // TODO Set new word
             return "correct"
         }
         if (gameMode == "arcade") setLives(prevLives => prevLives - 1)
         console.log(`${lives} left`)
         e.target.answer.value = ""
-        
+        // TODO Set new word 
         return "wrong"
     }
 
     return ( 
         <>
-            <div className="lives">{lives} Lives Left</div>
+            {gameMode === "arcade" && <div className="lives">{lives} Lives Left</div>}
             <div className="score">{score}</div>
             <h2>Whats Another Word For:</h2>
             <h1>{word.word}</h1>
