@@ -1,5 +1,6 @@
 import { useState } from "react"
 import HowTo from "../components/HowTo"
+import NavBar from "../components/NavBar"
 
 function Title({view, gameMode}) {
     const [showHowTo, setShow] = useState(false) 
@@ -16,10 +17,17 @@ function Title({view, gameMode}) {
         <>
             {!showHowTo ? 
                 <>
-                    <h1>Synonymz</h1>
-                    <button onClick={() => startGame("arcade")}>Arcade</button>
-                    <button onClick={() => startGame("timed")}>Timed</button>
-                    <button onClick={handleHowTo}>How to Play</button>
+                    <div id="logo">
+                        <h1>Synonymz</h1>
+                        {/* <div>High Score: 3</div> */}
+                    </div>
+                    <div className="buttons">
+                        <button onClick={() => startGame("arcade")}>Arcade</button>
+                        <button onClick={() => startGame("timed")}>Timed</button>
+                        <button onClick={handleHowTo}>How to Play</button>
+                    </div>
+                    <br />
+                <NavBar/>
                 </> 
             :
                 <>

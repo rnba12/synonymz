@@ -11,9 +11,11 @@ function App() {
 
     return (
         <>
-            {view == "title" && <Title view={setView} gameMode={setMode}/>}
-            {view == "game" && <Game view={setView} gameMode={gameMode} setFinalScore={setFinalScore}/>}
-            {view == "result" && <Result view={setView} score={finalScore}/>}
+            <main>
+                {view == "title" && <Title view={setView} gameMode={setMode}/>}
+                {view == "game" && <Game view={setView} gameMode={gameMode} setFinalScore={setFinalScore}/>}
+                {view == "result" && <Result view={setView} score={finalScore}/>}
+            </main>
         </>
     )
 }
