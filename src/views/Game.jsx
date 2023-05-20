@@ -5,6 +5,7 @@ import data from '../data.json';
 function Game({ view, gameMode, setFinalScore }) {
 
     const [lives, setLives] = useState(3)
+    const [time, setTime] = useState(10)
     const [score, setScore] = useState(0)
     const [word, setWord] = useState(data[0])
     const [no, setNo] = useState(0)
@@ -18,17 +19,23 @@ function Game({ view, gameMode, setFinalScore }) {
             view("result")
         }, 3000)
     }
+
     
     useEffect(() => {
         if (gameMode === "timed") {
-            setTimeout(() => {
+            if (time !== 0) {
+            let timer = setInterval(() => {
+                setTime(time - 1)
+                clearInterval(timer)
+            }, 1000)
+            } else {
                 endGame()
-            }, 10000)
+            }
         }
         if (lives == 0) {
             endGame()
         }
-    }, [lives])
+    }, [lives, time])
 
     function newWord() {
         // TODO use api or add more words to json
@@ -66,6 +73,7 @@ function Game({ view, gameMode, setFinalScore }) {
     return ( 
         <>
             {gameMode === "arcade" && <h3>{lives} Lives Left</h3>}
+            {gameMode === "timed" && <h3>{time}</h3>}
             <h3>{score}</h3>
             {state === "correct" && <h2 style={{color: "green"}}>Correct</h2>}
             {state === "wrong" && <h2 style={{color: "red"}}>Wrong</h2>}
