@@ -19,12 +19,11 @@ function Title({view, gameMode}) {
                 <>
                     <div id="logo">
                         <h1>Synonymz</h1>
-                        {/* <div>High Score: 3</div> */}
                     </div>
                     <div className="buttons">
                         <button onClick={() => startGame("arcade")}>Arcade</button>
                         <button onClick={() => startGame("timed")}>Timed</button>
-                        <button onClick={handleHowTo}>How to Play</button>
+                        <button onClick={handleHowTo}>How To Play</button>
                     </div>
                     <br />
                 <NavBar/>

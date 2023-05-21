@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import data from '../data.json';
+import GameData from "../components/GameData";
 
 function Game({ view, gameMode, setFinalScore }) {
 
@@ -52,7 +53,7 @@ function Game({ view, gameMode, setFinalScore }) {
             if (gameMode == "arcade") setLives(lives - 1)
         }
         setTimeout(() => {
-        if (lives - 1 !== 0) {
+        if (lives - 1 !== 0 && time > 2) {
             setState("typing")
             newWord()
         }
@@ -72,17 +73,15 @@ function Game({ view, gameMode, setFinalScore }) {
 
     return ( 
         <>
-            <div>
-                <h2>{score}</h2>
-                {gameMode === "arcade" && <h2>{lives} Lives Left</h2>}
-                {gameMode === "timed" && <h2>{time}</h2>}
+           <GameData score={score} time={time} lives={lives} gameMode={gameMode}/>
+            <div id="prompt">
+                {state === "correct" && <span style={{color: "green"}}>Correct</span>}
+                {state === "wrong" && <span style={{color: "red"}}>Wrong</span>}
+                {state === "typing" && <span>What&apos;s Another Word For</span>}
+                {state === "time up" && <span style={{color: "red"}}>Times Up</span>}
             </div>
-            {state === "correct" && <h2 style={{color: "green"}}>Correct</h2>}
-            {state === "wrong" && <h2 style={{color: "red"}}>Wrong</h2>}
-            {state === "typing" && <h2>Whats Another Word For:</h2>}
-            {state === "time up" && <h2>Times Up</h2>}
-            <h1>{word.word}</h1>
-            <form onSubmit={handleSubmit} autoComplete="off">
+            <div id="word">{word.word}</div>
+            <form className="buttons" onSubmit={handleSubmit} autoComplete="off">
                 <input name="answer" type="text"  disabled={state !== "typing" || lives === 0} />
                 <button disabled={state !== "typing" || lives === 0}>Enter</button>
             </form>

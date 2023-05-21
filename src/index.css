@@ -59,7 +59,7 @@ button:focus-visible {
 input[type="text"] {
   color: inherit;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.87);
+  border: 2px solid rgba(255, 255, 255, 0.87);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
