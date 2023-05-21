@@ -22,54 +22,60 @@ nav {
   gap: 1rem;
 }
 
-.buttons {
+.flex-row {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
+  flex-wrap: wrap;
 }
 
 #game-data {
-  height: min-content;
-  font-size: 3rem;
+  font-size: 2.7em;
   font-weight: 700;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1.8rem;
+  gap: 1.6em;
+  vertical-align: middle;
+  line-height: 1;
 }
 
 #game-data svg {
-  height: 3rem;
-  width: 3rem;
+  position: relative;
+  top: 2px;
+  height: 0.8em;
+  width: 0.8em;
 }
 
 #prompt {
-  font-size: 1.8rem;
+  font-size: 1.8em;
   font-weight: 700;
-  margin: 0.8rem 0;
+  margin: 0.3em 0;
 }
 
 #word {
-  font-size: 3.2rem;
+  font-size: 3.2em;
   font-weight: 700;
   text-transform: capitalize;
-  margin: 1rem 0;
+  margin-bottom: 0.5em;
 }
 
 form {
-  margin: 1rem 0;
+  margin: 1em 0;
+}
+
+form button {
+  font-size: 1.1em;
 }
 
 .score {
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 3.2em;
 }
 
-
-
 .high-score {
-  font-size: 1.7rem;
+  font-size: 1.7em;
   margin-bottom: 1.5rem;
 }

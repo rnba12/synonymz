@@ -24,6 +24,7 @@ a:hover {
 }
 
 body {
+  font-size: 1.2rem;
   margin: 0;
   display: flex;
   place-items: center;
@@ -46,10 +47,9 @@ button {
   font-family: inherit;
   background-color: #09AE4B;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: #098b3d;
 }
 button:focus,
 button:focus-visible {
@@ -65,11 +65,10 @@ input[type="text"] {
   font-weight: 500;
   font-family: inherit;
   background-color: inherit;
-  transition: border-color 0.25s;
 }
 
 svg {
-  color: #f9f9f9;
+  color: rgba(255, 255, 255, 0.87);
   height: 1.9rem;
   width: 1.9rem;
 

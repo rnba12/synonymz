@@ -81,7 +81,7 @@ function Game({ view, gameMode, setFinalScore }) {
                 {state === "time up" && <span style={{color: "red"}}>Times Up</span>}
             </div>
             <div id="word">{word.word}</div>
-            <form className="buttons" onSubmit={handleSubmit} autoComplete="off">
+            <form className="flex-row" onSubmit={handleSubmit} autoComplete="off">
                 <input name="answer" type="text"  disabled={state !== "typing" || lives === 0} />
                 <button disabled={state !== "typing" || lives === 0}>Enter</button>
             </form>

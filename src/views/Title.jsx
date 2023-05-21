@@ -20,7 +20,7 @@ function Title({view, gameMode}) {
                     <div id="logo">
                         <h1>Synonymz</h1>
                     </div>
-                    <div className="buttons">
+                    <div className="flex-row">
                         <button onClick={() => startGame("arcade")}>Arcade</button>
                         <button onClick={() => startGame("timed")}>Timed</button>
                         <button onClick={handleHowTo}>How To Play</button>
