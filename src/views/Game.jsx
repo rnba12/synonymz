@@ -16,6 +16,8 @@ function Game({ view, gameMode, setFinalScore }) {
         if (gameMode == "arcade") setState("wrong")
         if (gameMode == "timed") setState("time up")
         setFinalScore(score)
+        const highScore = window.localStorage.getItem(`${gameMode}-highscore`)
+        if (score > highScore || !highScore) window.localStorage.setItem(`${gameMode}-highscore`, score)
         setTimeout(() => {
             view("result")
         }, 3000)

@@ -26,7 +26,7 @@ function App() {
             <main data-theme={theme}>
                 {view == "title" && <Title view={setView} gameMode={setMode} theme={setTheme}/>}
                 {view == "game" && <Game view={setView} gameMode={gameMode} setFinalScore={setFinalScore}/>}
-                {view == "result" && <Result view={setView} score={finalScore}/>}
+                {view == "result" && <Result view={setView} score={finalScore} gameMode={gameMode}/>}
             </main>
         </>
     )
