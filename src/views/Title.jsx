@@ -2,7 +2,7 @@ import { useState } from "react"
 import HowTo from "../components/HowTo"
 import NavBar from "../components/NavBar"
 
-function Title({view, gameMode}) {
+function Title({view, gameMode, theme}) {
     const [showHowTo, setShow] = useState(false) 
 
     function startGame(mode) {
@@ -26,7 +26,7 @@ function Title({view, gameMode}) {
                         <button onClick={handleHowTo}>How To Play</button>
                     </div>
                     <br />
-                <NavBar/>
+                <NavBar theme={theme}/>
                 </> 
             :
                 <>

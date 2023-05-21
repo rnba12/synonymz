@@ -4,10 +4,14 @@
 }
 
 main {
-  width: 100vw;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--colour-background);
+  color: var(--colour-foreground);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 #logo {
@@ -20,6 +24,12 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+#theme-btn {
+  background-color: inherit;
+  padding: 0;
+  border: none;
 }
 
 .flex-row {
