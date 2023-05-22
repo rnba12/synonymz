@@ -4,13 +4,22 @@ import data from '../data.json';
 import GameData from "../components/GameData";
 
 function Game({ view, gameMode, setFinalScore }) {
-
+    
+    const [shuffled, setShuffled] = useState(false)
     const [lives, setLives] = useState(3)
     const [time, setTime] = useState(60)
     const [score, setScore] = useState(0)
     const [word, setWord] = useState(data[0])
     const [no, setNo] = useState(0)
     const [state, setState] = useState("typing")
+
+    function shuffleArray(array) {
+        console.log("shuffled")
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
 
     function endGame() {
         if (gameMode == "arcade") setState("wrong")
@@ -22,9 +31,12 @@ function Game({ view, gameMode, setFinalScore }) {
             view("result")
         }, 3000)
     }
-
     
     useEffect(() => {
+        if (!shuffled) {
+            shuffleArray(data)
+            setShuffled(true)
+        }
         if (gameMode === "timed") {
             if (time !== 0) {
             let timer = setInterval(() => {
@@ -39,6 +51,7 @@ function Game({ view, gameMode, setFinalScore }) {
             endGame()
         }
     }, [lives, time])
+    
 
     function newWord() {
         // TODO use api or add more words to json
