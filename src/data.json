@@ -1,146 +1,597 @@
 [
-    {
-      "word": "abundant",
-      "synonyms": ["plentiful", "copious", "abounding", "overflowing", "overwhelming", "ample", "bountiful", "luxuriant", "lush", "profuse"]
-    },
-    {
-      "word": "absent",
-      "synonyms": ["missing", "gone", "departed", "absentee", "away", "non-existent", "vacant", "vaporous", "ethereal"]
-    },
-    {
-      "word": "accept",
-      "synonyms": ["receive", "welcome", "take", "agree to", "acknowledge", "acquiesce", "assent", "consent", "hitchhike", "hitch"]
-    },
-    {
-      "word": "access",
-      "synonyms": ["approach", "entrance", "admittance", "admission", "way in", "avenue", "pathway", "ingress", "entranceway"]
-    },
-    {
-      "word": "accident",
-      "synonyms": ["mishap", "misfortune", "disaster", "catastrophe", "calamity", "mishap", "mischance", "misadventure", "mishap", "misfortune"]
-    },
-    {
-      "word": "account",
-      "synonyms": ["report", "statement", "description", "explanation", "justification", "narrative", "story", "tale", "chronicle", "history"]
-    },
-    {
-      "word": "accurate",
-      "synonyms": ["correct", "precise", "exact", "flawless", "unerring", "truthful", "reliable", "dependable", "trustworthy", "verifiable"]
-    },
-    {
-      "word": "achieve",
-      "synonyms": ["accomplish", "attain", "complete", "fulfill", "realize", "succeed", "master", "conquer", "overcome", "triumph"]
-    },
-    {
-      "word": "acid",
-      "synonyms": ["sour", "bitter", "pungent", "acrid", "harsh", "corrosive", "irritating", "stinging", "burning", "scalding"]
-    },
-    {
-      "word": "acquaintance",
-      "synonyms": ["friend", "associate", "companion", "partner", "confidant", "acquaintanceship", "familiarity", "relationship", "bond", "tie"]
-    },
-    {
-      "word": "action",
-      "synonyms": ["activity", "deed", "move", "performance", "undertaking", "operation", "process", "procedure", "course of action", "endeavor"]
-    },
-    {
-      "word": "add",
-      "synonyms": ["combine", "join", "unite", "include", "attach", "increase", "augment", "supplement", "enlarge", "expand"]
-    },
-    {
-      "word": "admire",
-      "synonyms": ["respect", "appreciate", "value", "hold in high esteem", "venerate", "honor", "glorify", "extol", "laud", "praise"]
-    },
-    {
-      "word": "adult",
-      "synonyms": ["grown-up", "mature", "developed", "full-grown", "of age"]
-    },
-    {
-      "word": "afraid",
-      "synonyms": ["scared", "frightened", "terrified", "panic-stricken", "terrified", "apprehensive", "anxious", "nervous", "uneasy", "trepidatious"]
-    },
-    {
-      "word": "agree",
-      "synonyms": ["consent", "assent", "accede", "hitchhike", "hitch"]
-    },
-    {
-      "word": "air",
-      "synonyms": ["atmosphere", "gas", "vapour", "ether", "element"]
-    },
-    {
-      "word": "alive",
-      "synonyms": ["living", "animate", "breathing", "existing", "subsisting"]
-    },
-    {
-      "word": "all",
-      "synonyms": ["every", "whole", "entire", "complete"]
-    },
-    {
-        "word": "beautiful",
-        "synonyms": ["attractive", "lovely", "pretty", "handsome", "striking", "dazzling", "enchanting", "gorgeous", "magnificent", "stunning"]
-      },
-      {
-        "word": "big",
-        "synonyms": ["large", "huge", "enormous", "gigantic", "vast", "mammoth", "colossal", "gargantuan", "immense", "prodigious"]
-      },
-      {
-        "word": "brave",
-        "synonyms": ["courageous", "fearless", "daring", "valiant", "indomitable", "heroic", "stalwart", "unflinching", "unafraid", "fearless"]
-      },
-      {
-        "word": "calm",
-        "synonyms": ["peaceful", "serene", "tranquil", "placid", "unruffled", "quiescent", "restful", "soothing", "placid", "mild"]
-      },
-      {
-        "word": "careful",
-        "synonyms": ["cautious", "circumspect", "meticulous", "precise", "exact", "fussy", "particular", "discriminating", "judicious", "discerning"]
-      },
-      {
-        "word": "cold",
-        "synonyms": ["chilly", "frosty", "icy", "shivering", "freezing", "glacial", "arctic", "wintry", "bleak", "dreary"]
-      },
-      {
-        "word": "common",
-        "synonyms": ["ordinary", "unremarkable", "undistinguished", "run-of-the-mill", "pedestrian", "uncommon", "rare", "unusual", "extraordinary", "unparalleled"]
-      },
-      {
-        "word": "dark",
-        "synonyms": ["dim", "gloomy", "murky", "sombre", "dreary", "somber", "bleak", "dreary", "gloomy", "desolate"]
-      },
-      {
-        "word": "day",
-        "synonyms": ["twenty-four hours", "light", "sunshine", "daylight", "morn", "noon", "afternoon", "evening", "night", "sunset"]
-      },
-      {
-        "word": "dead",
-        "synonyms": ["deceased", "unconscious", "insensible", "lifeless", "defunct", "moribund", "dying", "fading", "withering", "declining"]
-      },
-      {
-        "word": "delicious",
-        "synonyms": ["tasty", "savory", "appetizing", "luscious", "delectable", "yummy", "delightful", "exquisite", "mouth-watering", "heavenly"]
-      },
-      {
-        "word": "difficult",
-        "synonyms": ["hard", "tough", "onerous", "arduous", "demanding", "strenuous", "taxing", "challenging", "daunting", "formidable"]
-      },
-      {
-        "word": "do",
-        "synonyms": ["perform", "accomplish", "execute", "carry out", "effect", "make", "create", "produce", "build", "construct"]
-      },
-      {
-        "word": "easy",
-        "synonyms": ["simple", "uncomplicated", "undemanding", "effortless", "trouble-free", "light", "facile", "smooth", "unimpeded", "unobstructed"]
-      },
-      {
-        "word": "end",
-        "synonyms": ["finish", "termination", "conclusion", "culmination", "finale", "close", "consummation", "completion", "termination", "cessation"]
-      },
-      {
-        "word": "every",
-        "synonyms": ["all", "whole", "entire", "complete", "total", "each", "every one", "every single one", "every last one", "every bit"]
-      },
-      {
-        "word": "everything",
-        "synonyms": ["all", "whole", "entirety", "totality", "everything", "everything under the sun", "the whole shebang", "the whole kit and caboodle", "the whole"]
-    }
+  {
+    "word": "absent",
+    "synonyms": [
+      "missing",
+      "gone",
+      "departed",
+      "away",
+      "non-existent",
+      "vacant",
+      "vaporous",
+      "ethereal"
+    ]
+  },
+  {
+    "word": "accident",
+    "synonyms": [
+      "mishap",
+      "misfortune",
+      "disaster",
+      "catastrophe",
+      "calamity",
+      "mishap",
+      "mischance",
+      "misadventure",
+      "mishap",
+      "misfortune"
+    ]
+  },
+  {
+    "word": "accurate",
+    "synonyms": [
+      "correct",
+      "precise",
+      "exact",
+      "flawless",
+      "unerring",
+      "truthful",
+      "reliable",
+      "dependable",
+      "trustworthy",
+      "verifiable"
+    ]
+  },
+  {
+    "word": "achieve",
+    "synonyms": [
+      "accomplish",
+      "attain",
+      "complete",
+      "fulfill",
+      "realize",
+      "succeed",
+      "master",
+      "conquer",
+      "overcome",
+      "triumph"
+    ]
+  },
+  {
+    "word": "acquaintance",
+    "synonyms": [
+      "friend",
+      "associate",
+      "companion",
+      "partner",
+      "confidant",
+      "familiarity",
+      "relationship",
+      "bond",
+      "tie"
+    ]
+  },
+  {
+    "word": "action",
+    "synonyms": [
+      "activity",
+      "deed",
+      "move",
+      "performance",
+      "undertaking",
+      "operation",
+      "process",
+      "procedure",
+      "endeavor"
+    ]
+  },
+  {
+    "word": "beautiful",
+    "synonyms": [
+      "attractive",
+      "lovely",
+      "pretty",
+      "handsome",
+      "striking",
+      "dazzling",
+      "enchanting",
+      "gorgeous",
+      "magnificent",
+      "stunning"
+    ]
+  },
+  {
+    "word": "brave",
+    "synonyms": [
+      "courageous",
+      "fearless",
+      "daring",
+      "valiant",
+      "indomitable",
+      "heroic",
+      "stalwart",
+      "unflinching",
+      "unafraid",
+      "fearless"
+    ]
+  },
+  {
+    "word": "calm",
+    "synonyms": [
+      "peaceful",
+      "serene",
+      "tranquil",
+      "placid",
+      "unruffled",
+      "quiescent",
+      "restful",
+      "soothing",
+      "placid",
+      "mild"
+    ]
+  },
+  {
+    "word": "careful",
+    "synonyms": [
+      "cautious",
+      "circumspect",
+      "meticulous",
+      "precise",
+      "exact",
+      "fussy",
+      "particular",
+      "discriminating",
+      "judicious",
+      "discerning"
+    ]
+  },
+  {
+    "word": "cold",
+    "synonyms": [
+      "chilly",
+      "frosty",
+      "icy",
+      "shivering",
+      "freezing",
+      "glacial",
+      "arctic",
+      "wintry",
+      "bleak",
+      "dreary"
+    ]
+  },
+  {
+    "word": "dark",
+    "synonyms": [
+      "dim",
+      "gloomy",
+      "murky",
+      "sombre",
+      "dreary",
+      "somber",
+      "bleak",
+      "dreary",
+      "gloomy",
+      "desolate"
+    ]
+  },
+  {
+    "word": "dead",
+    "synonyms": [
+      "deceased",
+      "unconscious",
+      "insensible",
+      "lifeless",
+      "defunct",
+      "moribund",
+      "dying",
+      "fading",
+      "withering",
+      "declining"
+    ]
+  },
+  {
+    "word": "delicious",
+    "synonyms": [
+      "tasty",
+      "savory",
+      "appetizing",
+      "luscious",
+      "delectable",
+      "yummy",
+      "delightful",
+      "exquisite",
+      "mouth-watering",
+      "heavenly"
+    ]
+  },
+  {
+    "word": "difficult",
+    "synonyms": [
+      "hard",
+      "tough",
+      "onerous",
+      "arduous",
+      "demanding",
+      "strenuous",
+      "taxing",
+      "challenging",
+      "daunting",
+      "formidable"
+    ]
+  },
+  {
+    "word": "do",
+    "synonyms": [
+      "perform",
+      "accomplish",
+      "execute",
+      "carry out",
+      "effect",
+      "make",
+      "create",
+      "produce",
+      "build",
+      "construct"
+    ]
+  },
+  {
+    "word": "easy",
+    "synonyms": [
+      "simple",
+      "uncomplicated",
+      "undemanding",
+      "effortless",
+      "trouble-free",
+      "light",
+      "facile",
+      "smooth",
+      "unimpeded",
+      "unobstructed"
+    ]
+  },
+  {
+    "word": "end",
+    "synonyms": [
+      "finish",
+      "termination",
+      "conclusion",
+      "culmination",
+      "finale",
+      "close",
+      "consummation",
+      "completion",
+      "termination",
+      "cessation"
+    ]
+  },
+  {
+    "word": "everything",
+    "synonyms": [
+      "all",
+      "whole",
+      "entirety",
+      "totality",
+      "everything under the sun",
+      "the whole shebang",
+      "the whole kit and caboodle",
+      "the whole"
+    ]
+  },
+  {
+    "word": "charity",
+    "synonyms": [
+      "philanthropy",
+      "benevolence",
+      "altruism",
+      "almsgiving",
+      "beneficence"
+    ]
+  },
+  {
+    "word": "writing",
+    "synonyms": [
+      "composition",
+      "inscription",
+      "scription",
+      "epistle",
+      "letter",
+      "note",
+      "opus",
+      "paper",
+      "piece",
+      "production",
+      "script",
+      "treatise"
+    ]
+  },
+  {
+    "word": "disease",
+    "synonyms": [
+      "illness",
+      "ailment",
+      "malady",
+      "affliction",
+      "complaint",
+      "disorder",
+      "sickness",
+      "trouble",
+      "unhealthiness"
+    ]
+  },
+  {
+    "word": "candidate",
+    "synonyms": [
+      "applicant",
+      "aspirant",
+      "nominee",
+      "prospect",
+      "runner",
+      "someone in the running",
+      "someone vying for something"
+    ]
+  },
+  {
+    "word": "safety",
+    "synonyms": [
+      "assurance",
+      "certainty",
+      "confidence",
+      "protection",
+      "security",
+      "sureness",
+      "soundness",
+      "stability",
+      "uncertainty",
+      "vulnerability"
+    ]
+  },
+  {
+    "word": "smell",
+    "synonyms": [
+      "odor",
+      "scent",
+      "fragrance",
+      "aroma",
+      "bouquet",
+      "stench",
+      "whiff"
+    ]
+  },
+  {
+    "word": "clear",
+    "synonyms": [
+      "bright",
+      "clean",
+      "distinct",
+      "explicit",
+      "lucid",
+      "manifest",
+      "obvious",
+      "plain",
+      "recognizable",
+      "transparent",
+      "unclouded",
+      "unobstructed",
+      "unmistakable"
+    ]
+  },
+  {
+    "word": "live",
+    "synonyms": [
+      "dwell",
+      "reside",
+      "inhabit",
+      "stay",
+      "subsist",
+      "occupy",
+      "lodge",
+      "habitate",
+      "inhabit"
+    ]
+  },
+  {
+    "word": "commit",
+    "synonyms": [
+      "bind",
+      "consign",
+      "dedicate",
+      "devote",
+      "engage",
+      "pledge",
+      "promise",
+      "swear",
+      "undertake",
+      "vow"
+    ]
+  },
+  {
+    "word": "disagree",
+    "synonyms": [
+      "dissent",
+      "dispute",
+      "differ",
+      "object",
+      "protest",
+      "quarrel",
+      "refute",
+      "rebut",
+      "demur",
+      "hesitate"
+    ]
+  },
+  {
+    "word": "witty",
+    "synonyms": [
+      "clever",
+      "amusing",
+      "droll",
+      "funny",
+      "humorous",
+      "jocular",
+      "laughable",
+      "merry",
+      "mirthful",
+      "racy",
+      "sarcastic",
+      "satirical",
+      "waggish"
+    ]
+  },
+  {
+    "word": "quick",
+    "synonyms": [
+      "brisk",
+      "expeditious",
+      "fast",
+      "fleet",
+      "hasty",
+      "hurried",
+      "nimble",
+      "prompt",
+      "rapid",
+      "speedy",
+      "swift"
+    ]
+  },
+  {
+    "word": "puzzled",
+    "synonyms": [
+      "bewildered",
+      "confounded",
+      "dazed",
+      "disoriented",
+      "perplexed",
+      "stumped",
+      "thrown"
+    ]
+  },
+  {
+    "word": "necessary",
+    "synonyms": [
+      "essential",
+      "imperative",
+      "indispensable",
+      "needed",
+      "requisite",
+      "vital"
+    ]
+  },
+  {
+    "word": "balance",
+    "synonyms": [
+      "equilibrium",
+      "equipoise",
+      "poise",
+      "steadiness",
+      "stability",
+      "trim"
+    ]
+  },
+  {
+    "word": "advance",
+    "synonyms": [
+      "ameliorate",
+      "develop",
+      "improve",
+      "progress",
+      "promote",
+      "raise",
+      "upgrade"
+    ]
+  },
+  {
+    "word": "talk",
+    "synonyms": [
+      "converse",
+      "discourse",
+      "discuss",
+      "gossip",
+      "harangue",
+      "jaw",
+      "lecture",
+      "plead",
+      "prate",
+      "spiel"
+    ]
+  },
+  {
+    "word": "annoy",
+    "synonyms": [
+      "harass",
+      "aggravate",
+      "antagonise",
+      "bug",
+      "exasperate",
+      "irk",
+      "irritate",
+      "anger",
+      "bother",
+      "vex",
+      "frustrate"
+    ]
+  },
+  {
+    "word": "verify",
+    "synonyms": [
+      "confirm",
+      "substantiate",
+      "support",
+      "corroborate",
+      "prove",
+      "validate",
+      "authenticate",
+      "certify",
+      "demonstrate",
+      "establish",
+      "vindicate",
+      "warrant",
+      "accredit",
+      "ratify",
+      "uphold",
+      "evidence",
+      "justify",
+      "attest",
+      "check"
+    ]
+  },
+  {
+    "word": "recent",
+    "synonyms": [
+      "contemporary",
+      "modern",
+      "new",
+      "current",
+      "late",
+      "latest",
+      "modernist",
+      "neoteric",
+      "newborn",
+      "newfangled",
+      "young",
+      "hot",
+      "fresh"
+    ]
+  },
+  {
+    "word": "pattern",
+    "synonyms": [
+      "design",
+      "motif",
+      "figure",
+      "decoration",
+      "arrangement",
+      "ornament",
+      "motive",
+      "trim",
+      "ornamentation",
+      "device",
+      "markings",
+      "marking",
+      "patterning",
+      "impression",
+      "theme",
+      "notion"
+    ]
+  }
 ]
