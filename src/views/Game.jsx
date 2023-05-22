@@ -55,7 +55,7 @@ function Game({ view, gameMode, setFinalScore }) {
             if (gameMode == "arcade") setLives(lives - 1)
         }
         setTimeout(() => {
-        if (lives - 1 !== 0 && time > 2) {
+        if (lives !== 0 && time > 2) {
             setState("typing")
             newWord()
         }
