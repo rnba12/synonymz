@@ -7,14 +7,13 @@ function Game({ view, gameMode, setFinalScore }) {
     
     const [shuffled, setShuffled] = useState(false)
     const [lives, setLives] = useState(3)
-    const [time, setTime] = useState(60)
+    const [time, setTime] = useState(6060)
     const [score, setScore] = useState(0)
-    const [word, setWord] = useState(data[0])
+    const [word, setWord] = useState(null)
     const [no, setNo] = useState(0)
-    const [state, setState] = useState("typing")
+    const [state, setState] = useState(null)
 
     function shuffleArray(array) {
-        console.log("shuffled")
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
@@ -35,7 +34,9 @@ function Game({ view, gameMode, setFinalScore }) {
     useEffect(() => {
         if (!shuffled) {
             shuffleArray(data)
+            setWord(data[0])
             setShuffled(true)
+            setState("typing")
         }
         if (gameMode === "timed") {
             if (time !== 0) {
@@ -50,13 +51,19 @@ function Game({ view, gameMode, setFinalScore }) {
         if (lives == 0) {
             endGame()
         }
-    }, [lives, time])
-    
+    }, [lives, time, no])
+
 
     function newWord() {
         // TODO use api or add more words to json
-        setWord(data[no + 1])
-        setNo(prev => prev + 1)
+        console.log(no)
+        if (!data[no + 1] || lives == 0) {
+            endGame()
+        }
+        else {
+            setWord(data[no + 1])
+            setNo(no + 1)
+        }
     }
 
     function handleNext(isCorrect) {
@@ -88,18 +95,20 @@ function Game({ view, gameMode, setFinalScore }) {
 
     return ( 
         <>
-           <GameData score={score} time={time} lives={lives} gameMode={gameMode}/>
-            <div id="prompt">
-                {state === "correct" && <span style={{color: "green"}}>Correct</span>}
-                {state === "wrong" && <span style={{color: "red"}}>Wrong</span>}
-                {state === "typing" && <span>What&apos;s Another Word For</span>}
-                {state === "time up" && <span style={{color: "red"}}>Times Up</span>}
-            </div>
-            <div id="word">{word.word}</div>
-            <form className="flex-row" onSubmit={handleSubmit} autoComplete="off">
-                <input name="answer" type="text"  disabled={state !== "typing" || lives === 0} />
-                <button disabled={state !== "typing" || lives === 0}>Enter</button>
-            </form>
+            {state && <>
+               <GameData score={score} time={time} lives={lives} gameMode={gameMode}/>
+                <div id="prompt">
+                    {state === "correct" && <span style={{color: "green"}}>Correct</span>}
+                    {state === "wrong" && <span style={{color: "red"}}>Wrong</span>}
+                    {state === "typing" && <span>What&apos;s Another Word For</span>}
+                    {state === "time up" && <span style={{color: "red"}}>Times Up</span>}
+                </div>
+                <div id="word">{word.word}</div>
+                <form className="flex-row" onSubmit={handleSubmit} autoComplete="off">
+                    <input name="answer" type="text"  disabled={state !== "typing" || lives === 0} />
+                    <button disabled={state !== "typing" || lives === 0}>Enter</button>
+                </form>
+            </>}
         </>
     );
 }
