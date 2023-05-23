@@ -9,7 +9,7 @@ function HowTo() {
             </div>
             <div>
                 <h4>Timed</h4>
-                <p>Get as many points as you can in 2 minutes</p>
+                <p>Get as many points as you can in 3 minutes</p>
             </div>
         </>
      );
