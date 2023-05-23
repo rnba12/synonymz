@@ -19,6 +19,11 @@
   --colour-background: rgba(255, 255, 255, 0.87);
 }
 
+[data-theme='dark'] {
+  --colour-background: #1c1c1c;
+  --colour-foreground: rgba(255, 255, 255, 0.87);
+}
+
 body {
   font-size: 1.2rem;
   margin: 0;
@@ -30,7 +35,7 @@ h1 {
 }
 
 button {
-  color: var(--colour-foreground);
+  color: rgba(255, 255, 255, 0.87);
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
