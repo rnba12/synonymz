@@ -7,8 +7,8 @@ function Game({ view, gameMode, setFinalScore }) {
     
     const [shuffled, setShuffled] = useState(false)
     const [gameOver, setOver] = useState(false)
-    const [lives, setLives] = useState(3)
-    const [time, setTime] = useState(10)
+    const [lives, setLives] = useState(10)
+    const [time, setTime] = useState(120)
     const [score, setScore] = useState(0)
     const [word, setWord] = useState(null)
     const [no, setNo] = useState(0)
