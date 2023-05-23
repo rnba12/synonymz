@@ -53,13 +53,11 @@ function Game({ view, gameMode, setFinalScore }) {
                 clearInterval(timer)
             }, 1000)
             } else if (time === 0) {
-                console.log("out of time")
                 endGame("time")
             }
         }
         if (lives === 0 && !gameOver) {
             setTimeout(() => {
-                console.log("out of lives")
                 endGame("lives")
             }, 2000)
         }
@@ -69,7 +67,6 @@ function Game({ view, gameMode, setFinalScore }) {
     function newWord() {
         // TODO use api or add more words to json
         if (!data[no + 1]) {
-            console.log("out of words")
             endGame("words")
         }
         else {
