@@ -6,8 +6,9 @@ import GameData from "../components/GameData";
 function Game({ view, gameMode, setFinalScore }) {
     
     const [shuffled, setShuffled] = useState(false)
+    const [gameOver, setOver] = useState(false)
     const [lives, setLives] = useState(3)
-    const [time, setTime] = useState(6060)
+    const [time, setTime] = useState(10)
     const [score, setScore] = useState(0)
     const [word, setWord] = useState(null)
     const [no, setNo] = useState(0)
@@ -20,9 +21,16 @@ function Game({ view, gameMode, setFinalScore }) {
         }
     }
 
-    function endGame() {
-        if (gameMode == "arcade") setState("wrong")
-        if (gameMode == "timed") setState("time up")
+    function endGame(action) {
+        setOver(true)
+        if (action === "lives") {
+            setState("out of lives")
+        } else if (action === "time") {
+            setState("time up")
+        } else if (action === "words" ) {
+            setState("out of words")
+        }
+
         setFinalScore(score)
         const highScore = window.localStorage.getItem(`${gameMode}-highscore`)
         if (score > highScore || !highScore) window.localStorage.setItem(`${gameMode}-highscore`, score)
@@ -39,26 +47,30 @@ function Game({ view, gameMode, setFinalScore }) {
             setState("typing")
         }
         if (gameMode === "timed") {
-            if (time !== 0) {
+            if (time !== 0 && !gameOver) {
             let timer = setInterval(() => {
                 setTime(time - 1)
                 clearInterval(timer)
             }, 1000)
-            } else {
-                endGame()
+            } else if (time === 0) {
+                console.log("out of time")
+                endGame("time")
             }
         }
-        if (lives == 0) {
-            endGame()
+        if (lives === 0 && !gameOver) {
+            setTimeout(() => {
+                console.log("out of lives")
+                endGame("lives")
+            }, 2000)
         }
     }, [lives, time, no])
 
 
     function newWord() {
         // TODO use api or add more words to json
-        console.log(no)
-        if (!data[no + 1] || lives == 0) {
-            endGame()
+        if (!data[no + 1]) {
+            console.log("out of words")
+            endGame("words")
         }
         else {
             setWord(data[no + 1])
@@ -101,7 +113,9 @@ function Game({ view, gameMode, setFinalScore }) {
                     {state === "correct" && <span style={{color: "green"}}>Correct</span>}
                     {state === "wrong" && <span style={{color: "red"}}>Wrong</span>}
                     {state === "typing" && <span>What&apos;s Another Word For</span>}
-                    {state === "time up" && <span style={{color: "red"}}>Times Up</span>}
+                    {state === "time up" && <span>Times Up</span>}
+                    {state === "out of words" && <span>Out of Words</span>}
+                    {state === "out of lives" && <span>Out of Lives</span>}
                 </div>
                 <div id="word">{word.word}</div>
                 <form className="flex-row" onSubmit={handleSubmit} autoComplete="off">
