@@ -1,4 +1,16 @@
 function GameData({ score, lives, time, gameMode}) {
+
+  function formatTime(totalSeconds) {
+
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+
+    function padTo2Digits(num) {
+    return num.toString().padStart(2, '0');
+    }
+    return `${(minutes)}:${padTo2Digits(seconds)}`;
+}
+
     return ( 
         <div id="game-data">
             {score}
@@ -10,7 +22,7 @@ function GameData({ score, lives, time, gameMode}) {
             {gameMode === "timed" && 
             <div className="flex-row">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" width="16" height="16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8.575-3.25a.825.825 0 1 0-1.65 0v3.5c0 .337.205.64.519.766l2.5 1a.825.825 0 0 0 .612-1.532l-1.981-.793Z"></path></svg>
-                {time}
+                {formatTime(time)}
             </div>}
         </div>
      );
